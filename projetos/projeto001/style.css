@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(#3b1566, #5f4da8);
+  color: #d6d6ea;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.description #chapter {
+  margin: 30px 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.description h1 {
+  margin-bottom: 40px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons button i {
+  font-size: 65px;
+  transition: color 0.3s ease;
+  color: #d6d6ea;
+}
+
+.buttons button i:hover {
+  color: white;
+}
