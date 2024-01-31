@@ -40,10 +40,14 @@ body {
 
 .buttons button i {
   font-size: 65px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
   color: #d6d6ea;
 }
 
 .buttons button i:hover {
   color: white;
+}
+
+.buttons #play i:hover {
+  transform: scale(1.1);
 }
