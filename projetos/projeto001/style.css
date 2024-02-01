@@ -10,10 +10,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: linear-gradient(#3b1566, #5f4da8);
   color: #d6d6ea;
+  text-align: center;
   display: grid;
   place-items: center;
   height: 100vh;
-  text-align: center;
 }
 
 .description #chapter {
@@ -32,7 +32,7 @@ body {
   align-items: center;
 }
 
-.buttons button {
+button {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -40,14 +40,33 @@ body {
 
 .buttons button i {
   font-size: 65px;
-  transition: color 0.3s ease, transform 0.3s ease;
   color: #d6d6ea;
+  transition: all 0.3s;
 }
 
 .buttons button i:hover {
   color: white;
 }
 
-.buttons #play i:hover {
+.buttons button#play-pause i:hover {
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  .buttons {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .buttons button i:hover {
+    color: #d6d6ea;
+  }
+
+  .buttons button i:active {
+    color: white;
+  }
+
+  .buttons button#play-pause i:hover {
+    transform: none;
+  }
 }
