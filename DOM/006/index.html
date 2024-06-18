@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #006</title>
+    <style>
+      img {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 id="title">Título - <i>Alanzoka</i></h3>
+
+    <h2 id="subtitle">Ceeeeeeeeeeelbit</h2>
+
+    <div class="news">
+      <h1>News Title <strong>One</strong></h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum
+        laboriosam rem consequatur facilis dolorem placeat, perspiciatis iste
+        earum odit eaque non ratione soluta, nisi ducimus adipisci deleniti
+        architecto praesentium eos?
+      </p>
+    </div>
+
+    <div>
+      <h1>News Title Two</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio dolores
+        nulla cum cupiditate inventore nam incidunt facilis hic necessitatibus
+        neque qui maiores aspernatur, magni laborum molestiae dolorem doloribus
+        omnis accusantium.
+      </p>
+    </div>
+
+    <img id="alanzoka" src="img01.jpg" alt="Alanzoka" />
+
+    <img src="img02.png" alt="Celbit" />
+
+    <!-- JavaScript -->
+    <script>
+      // innerHTML
+      // outerHTML
+      // innerText
+
+      let element = document.querySelector("#title > i");
+      element.style.color = "red";
+      element.style.backgroundColor = "black";
+      element.style.padding = "5px";
+      console.log(element.innerHTML);
+
+      let title01 = document.querySelector(".news > h1");
+
+      // element.innerText = "New <i>Title</i>"; (não pode usar tags)
+      title01.innerHTML = "New <i>Title</i>";
+
+      console.log(title01.innerHTML);
+      console.log(title01.outerHTML);
+      console.log(title01.innerText);
+
+      let alanImg = document.querySelector("#alanzoka");
+      alanImg.style.borderRadius = "50%";
+    </script>
+  </body>
+</html>
