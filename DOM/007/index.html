@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #007</title>
+    <style>
+      img {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 id="title">Título - <i>Alanzoka</i></h3>
+
+    <div class="news">
+      <h1>News Title <strong>One</strong></h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum
+        laboriosam rem consequatur facilis dolorem placeat, perspiciatis iste
+        earum odit eaque non ratione soluta, nisi ducimus adipisci deleniti
+        architecto praesentium eos?
+      </p>
+    </div>
+
+    <div>
+      <h1>News Title Two</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio dolores
+        nulla cum cupiditate inventore nam incidunt facilis hic necessitatibus
+        neque qui maiores aspernatur, magni laborum molestiae dolorem doloribus
+        omnis accusantium.
+      </p>
+    </div>
+
+    <img id="alanzoka" src="img01.jpg" alt="Alanzoka" />
+
+    <img src="img02.png" alt="Celbit" />
+
+    <!-- JavaScript -->
+    <script>
+      // atributes
+      let imgALan = document.querySelector("#alanzoka");
+      imgALan.src = "img02.png";
+      console.log(imgALan.alt);
+
+      document.querySelector("#title").innerHTML = imgALan.alt;
+
+      // console operations (podemos fazer operações e usasr atributos de JavaScript no próprio console do inspect element do navegador.)
+    </script>
+  </body>
+</html>
