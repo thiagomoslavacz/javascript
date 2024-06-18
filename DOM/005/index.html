@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #005</title>
+    <style>
+      #second {
+        color: red;
+      }
+
+      .first-div {
+        font-weight: bold;
+        font-size: 18px;
+        color: blue;
+      }
+
+      ul > li:last-child {
+        font-weight: bold;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="first">First Paragraph</p>
+
+    <p id="second">Second Paragraph</p>
+
+    <div class="first-div">Text 1 in a div</div>
+
+    <div>Text 2 in a div</div>
+
+    <ul>
+      <li>item 01</li>
+      <li>item 02</li>
+      <li>item 03</li>
+      <li>item 04</li>
+    </ul>
+
+    <script>
+      /*    
+        querySelector
+        querySelectorALl
+      */
+
+      let element = document.querySelector("ul > li:last-child");
+      console.log(element);
+    </script>
+  </body>
+</html>
