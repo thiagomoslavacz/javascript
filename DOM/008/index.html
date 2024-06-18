@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #008</title>
+    <style>
+      img {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 id="title">Título</h3>
+
+    <h2 id="subtitle">Subtítulo</h2>
+
+    <div class="news">
+      <h1>News Title <strong>One</strong></h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum
+        laboriosam rem consequatur facilis dolorem placeat, perspiciatis iste
+        earum odit eaque non ratione soluta, nisi ducimus adipisci deleniti
+        architecto praesentium eos?
+      </p>
+    </div>
+
+    <div>
+      <h1>News Title Two</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio dolores
+        nulla cum cupiditate inventore nam incidunt facilis hic necessitatibus
+        neque qui maiores aspernatur, magni laborum molestiae dolorem doloribus
+        omnis accusantium.
+      </p>
+    </div>
+
+    <img src="img01.jpg" alt="Alanzoka" onclick="alan()" />
+
+    <img src="img02.png" alt="Celbit" onclick="celb()" />
+
+    <!-- JavaScript -->
+    <script>
+      // Usando Funções (function) e Eventos (onclick) para alterar o conteúdo.
+      function execute() {
+        let element = document.querySelector("#title");
+        element.innerText = "Novo Título";
+        element.style.color = "green";
+        element.style.fontSize = "30px";
+        element.style.textAlign = "center";
+      }
+
+      execute();
+      // ou vá no console do Inspect Element e digite "execute()" sem as áspas, para o mesmo resultado
+
+      // ------------------------------------------------------------------------
+
+      function alan() {
+        let alanTitle = document.querySelector("#subtitle");
+        alanTitle.innerText = "ALANZOKA";
+        alanTitle.style.color = "red";
+        alanTitle.style.fontSize = "50px";
+        alanTitle.style.textAlign = "center";
+        console.log(alanTitle.innerText);
+      }
+
+      function celb() {
+        let celbTitle = document.querySelector("#subtitle");
+        celbTitle.innerText = "CELBIT";
+        celbTitle.style.color = "blue";
+        celbTitle.style.fontSize = "50px";
+        celbTitle.style.textAlign = "center";
+        console.log(celbTitle.innerText);
+      }
+    </script>
+  </body>
+</html>
