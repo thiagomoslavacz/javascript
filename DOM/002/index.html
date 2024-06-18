@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #002</title>
+  </head>
+  <body>
+    <h1 id="title">Hello World!</h1>
+
+    <script>
+      // DOM (Document Object Model)
+      function hello() {
+        console.log("Hello World!");
+      }
+
+      hello();
+
+      document.body.style.background = "lawngreen";
+      document.getElementById("title").innerText = "Novo Título";
+
+      // BOM (Browser Object Model)
+      if (confirm("Deseja ir para o Google?")) {
+        location.href = "https://www.google.com";
+      }
+    </script>
+  </body>
+</html>
