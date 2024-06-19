@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #010</title>
+    <style>
+      .box {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 50px auto;
+        width: 400px;
+        padding: 20px;
+        border: 1px solid gray;
+        text-align: center;
+      }
+
+      .alert {
+        padding: 5px;
+        text-align: center;
+        background-color: red;
+        color: white;
+        font-weight: bold;
+      }
+
+      button {
+        display: flex;
+        margin: 25px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>Just one paragraph.</p>
+    </div>
+
+    <button onclick="execute()">Click Me!</button>
+
+    <script>
+      function execute() {
+        // Criar o elemento:
+        let newElement = document.createElement("p");
+        newElement.className = "alert";
+        newElement.innerText = "Warning Sing!";
+
+        // Adicionar o novo elemento a div existente:
+        let element = document.querySelector(".box");
+        element.appendChild(newElement);
+      }
+    </script>
+  </body>
+</html>
