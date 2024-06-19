@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #009</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        text-align: center;
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+      }
+
+      img {
+        width: 300px;
+      }
+
+      .news {
+        border: 1px solid black;
+        background-color: rgb(238, 238, 238);
+        border-radius: 10px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        margin: 50px;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="news">
+      <h1>News Title</h1>
+      <h3 id="summary">News Summary</h3>
+      <img src="img01.jpg" alt="Alanzoka" />
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+        consectetur incidunt ex, illum voluptas in explicabo ea dolorum sint
+        laudantium non numquam sit? Praesentium corrupti, molestiae blanditiis
+        illum amet assumenda.
+      </p>
+    </div>
+
+    <script>
+      let element = document.querySelector("h3");
+
+      // hasAttribute
+      if (element.hasAttribute("id")) {
+        console.log("true");
+      } else {
+        console.log("false");
+      }
+
+      // getAttribute
+      console.log(element.getAttribute("id"));
+
+      // setAttribute
+      element.setAttribute("title", "Summary Title");
+
+      // removeAttribute
+      let image = document.querySelector("img");
+      // image.removeAttribute("src");
+
+      // attributes
+      console.log(image.attributes["src"]);
+    </script>
+  </body>
+</html>
