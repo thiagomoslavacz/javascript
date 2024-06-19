@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #011</title>
+    <style>
+      .container {
+        border: 2px solid black;
+        padding: 20px;
+        margin: 20px;
+      }
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: red;
+        color: white;
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">Inside the div.</div>
+
+    <script>
+      let div = document.querySelector(".container");
+
+      //   // Adicionar um elemento antes da 'div', (before).
+      //   div.before("AAA");
+
+      //   // Adicionar um elemento dentro da 'div', porém acima dos outros filhos, (prepend).
+      //   div.prepend("BBB ");
+
+      //   // Adicionar um elemento dentro da 'div', porém abaixo dos outros filhos, (append).
+      //   div.append(" CCC");
+
+      //   // Adicionar um elemento após a 'div', (after).
+      //   div.after("DDD");
+
+      let p1 = document.createElement("p");
+      let p2 = document.createElement("p");
+      let p3 = document.createElement("p");
+      let p4 = document.createElement("p");
+      p1.innerText = "First Paragraph";
+      p2.innerText = "Second Paragraph";
+      p3.innerText = "Third Paragraph";
+      p4.innerText = "Fourth Paragraph";
+
+      div.before(p1);
+
+      div.prepend(p2);
+
+      div.append(p3);
+
+      div.after(p4);
+    </script>
+  </body>
+</html>
