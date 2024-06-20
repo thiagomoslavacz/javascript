@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #013</title>
+    <style>
+      .container {
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid black;
+        padding: 20px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <p>Paragraph inside the div</p>
+      <ul>
+        <li>item 01</li>
+        <li>item 02</li>
+        <li>item 03</li>
+      </ul>
+    </div>
+
+    <script>
+      // Clone Elements:
+      // let newDiv = document.querySelector("#container").cloneNode(true);
+      // document.querySelector("#container").after(newDiv);
+
+      // Remove Elements:
+      // document.querySelector("#container").remove();
+      document.querySelectorAll("#container > ul > li")[0].remove();
+    </script>
+  </body>
+</html>
