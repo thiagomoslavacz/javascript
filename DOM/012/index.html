@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #012</title>
+    <style>
+      .container {
+        border: 1px solid black;
+        padding: 20px;
+        margin: 20px;
+      }
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: green;
+        color: white;
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">Inside the div</div>
+
+    <script>
+      let div = document.querySelector(".container");
+
+      // insertAdjacentText:
+
+      // div.insertAdjacentText("beforebegin", "AAA"); // Before the div
+      // div.insertAdjacentText("afterbegin", "BBB"); // After, Inside the div
+      // div.insertAdjacentText("beforeend", "CCC"); // Before, Inside the div
+      // div.insertAdjacentText("afterend", "DDD"); // After the div
+
+      // insertAdjacentHTML:
+
+      // div.insertAdjacentHTML("beforebegin", "<p>AAA</p>");
+      // div.insertAdjacentHTML("afterbegin", "<p>BBB</p>");
+      // div.insertAdjacentHTML("beforeend", "<p>CCC</p>");
+      // div.insertAdjacentHTML("afterend", "<p>DDD</p>");
+
+      // insertAdjacentElement:
+
+      // let paragraph = document.createElement("p");
+      // paragraph.innerText = "Text";
+
+      // Apenas um dos quatro abaixo pode ser utilizado, a não ser que clone a variável 'paragraph'.
+      // div.insertAdjacentElement("beforebegin", paragraph);
+      // div.insertAdjacentElement("afterbegin", paragraph);
+      // div.insertAdjacentElement("beforeend", paragraph);
+      // div.insertAdjacentElement("afterend", paragraph);
+    </script>
+  </body>
+</html>
