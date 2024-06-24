@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #016</title>
+    <style>
+      h1 {
+        color: red;
+        margin-top: 50px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <p style="color: rgb(15, 15, 255); margin-top: 20px">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, dolore.
+    </p>
+
+    <script>
+      let p = document.querySelector("p");
+      console.log(p.style.color);
+      console.log(p.style.marginTop);
+
+      console.log("--- divison ---");
+
+      // getComputedStyle
+      let property = getComputedStyle(document.querySelector("h1"));
+      console.log(property.color);
+      console.log(property.marginTop);
+      console.log(property.border);
+
+      console.log("--- divison ---");
+
+      console.log(property.borderWidth);
+      console.log(property.borderStyle);
+      console.log(property.borderColor);
+    </script>
+  </body>
+</html>
