@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #017</title>
+    <style>
+      div {
+        width: 300px;
+        height: 200px;
+        padding: 20px;
+        margin: 50px auto;
+        background-color: lightblue;
+        border-left: 2px solid black;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <p>any content</p>
+
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dicta
+      velit a, sit nemo enim facere tempora consequatur eveniet incidunt ea
+      dolore fugit esse quas quidem impedit ut soluta iure sapiente ad, rem
+      repellendus voluptatem. Perferendis, porro sequi exercitationem quisquam
+      iste atque! Temporibus, provident distinctio voluptate deleniti placeat
+      praesentium nihil ratione rerum quibusdam harum quasi, obcaecati mollitia
+      optio. Voluptates magni commodi hic aut ut, dolorem, excepturi quae iste
+      tempora nihil magnam sit, modi perferendis totam similique itaque
+      blanditiis. Nemo dolores soluta eligendi, quibusdam deserunt autem nostrum
+      incidunt voluptate veniam atque eos necessitatibus aliquid quam.
+      Reprehenderit iure aspernatur accusamus consequuntur doloremque.
+    </div>
+
+    <p id="properties"></p>
+    <button onclick="searchProperty()">Execute</button>
+
+    <script>
+      function searchProperty() {
+        let div = document.querySelector("div");
+        let paragraph = document.querySelector("#properties");
+
+        let results = "";
+        results += "offsetLeft = " + div.offsetLeft + " ";
+        results += "offsetTop = " + div.offsetTop + " ";
+        results += "offsetWidth = " + div.offsetWidth + " ";
+        results += "offsetHeight = " + div.offsetHeight + " ";
+
+        results += "scrollTop = " + div.scrollTop + " ";
+        results += "scrollHeight = " + div.scrollHeight + " ";
+
+        // or: paragraph.innnerText
+        paragraph.textContent = results;
+      }
+    </script>
+  </body>
+</html>
