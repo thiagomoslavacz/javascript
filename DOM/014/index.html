@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #014</title>
+    <style>
+      .paragraph01 {
+        background-color: yellow;
+      }
+
+      .paragraph02 {
+        background-color: greenyellow;
+      }
+
+      .space {
+        padding: 10px;
+      }
+
+      .border {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="paragraph01 space">
+      Lorem, ipsum dolor sit amet consectetur adipisicing.
+    </p>
+
+    <script>
+      let p = document.querySelector("p");
+
+      // // className (Proprieadade que permite ler e alterar as classes do elemento).
+      // p.className = "paragraph02 space";
+      // console.log(p.className);
+
+      // classList
+      // p.classList.add("paragraph02");
+      // p.classList.remove("space");
+      // p.classList.toggle("border");
+
+      if (p.classList.contains("space")) {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+    </script>
+  </body>
+</html>
