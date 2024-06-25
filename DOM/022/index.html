@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #022</title>
+    <style>
+      #remove {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Title 01</h1>
+    <button id="add">Add Yellow Background</button>
+    <button id="remove">Add Transparent Background</button>
+
+    <script>
+      /*
+      let button = (document.querySelector("button").onclick = (e) => {
+        let element = document.querySelector("h1");
+
+        if (element.style.backgroundColor == "") {
+          element.style.backgroundColor = "Yellow";
+          e.target.textContent = "Add Transparent Background";
+        } else {
+          element.style.backgroundColor = "";
+          e.target.textContent = "Add Yellow Background";
+        }
+      });
+      */
+
+      let addButton = document
+        .querySelector("#add")
+        .addEventListener("click", addBackground);
+
+      let removeButton = document
+        .querySelector("#remove")
+        .addEventListener("click", removeBackground);
+
+      function addBackground() {
+        document.querySelector("h1").style.backgroundColor = "Yellow";
+        document.querySelector("#add").style.display = "none";
+        document.querySelector("#remove").style.display = "block";
+      }
+
+      function removeBackground() {
+        document.querySelector("h1").style.backgroundColor = "Transparent";
+        document.querySelector("#remove").style.display = "none";
+        document.querySelector("#add").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
