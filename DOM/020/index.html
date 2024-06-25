@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #020</title>
+    <style>
+      h1 {
+        margin: 50px auto;
+      }
+
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h1>Hello World!</h1>
+      <button onclick="changeText()">Click Me</button>
+      <p>Click Me too</p>
+    </div>
+
+    <script>
+      document.querySelector("p").onclick = function () {
+        document.querySelector("h1").textContent =
+          "Text changed in 'on click' event in paragraph";
+      };
+
+      function changeText() {
+        document.querySelector("h1").textContent =
+          "text changed in 'onclick' event";
+      }
+    </script>
+  </body>
+</html>
