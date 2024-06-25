@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #021</title>
+  </head>
+  <body>
+    <h1 id="title-01">Title 01</h1>
+    <h1 id="title-02">Title 02</h1>
+
+    <button id="add">Add Events</button>
+    <button id="button">Run Events</button>
+    <button id="remove">Remove Events</button>
+
+    <script>
+      document.querySelector("#add").addEventListener("click", addEvents);
+      document.querySelector("#remove").addEventListener("click", removeEvents);
+
+      function addEvents() {
+        let element = document.querySelector("#button");
+        element.addEventListener("click", execute01);
+        element.addEventListener("click", execute02);
+      }
+
+      function execute01() {
+        let now = new Date();
+        document.querySelector("#title-01").textContent = now.getSeconds();
+      }
+
+      function execute02() {
+        let now = new Date();
+        document.querySelector("#title-02").textContent = now.getSeconds();
+      }
+
+      function removeEvents() {
+        document
+          .querySelector("#button")
+          .removeEventListener("click", execute02);
+      }
+    </script>
+  </body>
+</html>
