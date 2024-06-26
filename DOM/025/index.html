@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #025</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      div {
+        padding: 30px;
+        background-color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Any Element</div>
+
+    <script>
+      document.querySelector("div").addEventListener("mousemove", () => {
+        // console.log(event.pageX + ":" + event.pageY);
+
+        if (event.pageX <= 100) {
+          event.target.style.backgroundColor = "red";
+        } else if (event.pageX >= 600) {
+          event.target.style.backgroundColor = "Green";
+        } else {
+          event.target.style.backgroundColor = "yellow";
+        }
+      });
+    </script>
+  </body>
+</html>
