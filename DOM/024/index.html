@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #024</title>
+    <style>
+      div {
+        padding: 30px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Any Element</div>
+
+    <script>
+      document.querySelector("div").addEventListener("mousedown", () => {
+        // console.log(event.button);
+
+        if (event.shiftKey) {
+          console.log("OK - Shift");
+        }
+
+        if (event.altKey) {
+          console.log("OK - Alt");
+        }
+
+        if (event.ctrlKey) {
+          console.log("OK - Ctrl");
+        }
+
+        if (event.ctrlKey && event.shiftKey) {
+          console.log("Multi-key Combination (ctrl + shift)");
+        }
+
+        // For Mac Apple:
+        // if (event.metaKey) {
+        //   console.log("OK - Meta");
+        // }
+      });
+    </script>
+  </body>
+</html>
