@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #027</title>
+  </head>
+  <body>
+    <input type="text" id="textBox" />
+
+    <script>
+      // 'key': especificar apenas o nome comum da tecla pressionada, ex: (D, control).
+      // 'code': especificar cada nome de cada tecla, ex: (keyD, controlRight).
+      // 'which': número ASCII de cada tecla.
+
+      let element = document.querySelector("#textBox");
+
+      // Bloquer Tecla F1 para abrir o googleHelp e Validação.
+      element.addEventListener("keydown", (event) => {
+        if (event.code == "F1") {
+          event.preventDefault();
+          validation();
+        }
+      });
+
+      function validation() {
+        console.log("True!");
+      }
+
+      // Número ASCII de cada tecla.
+      element.addEventListener("keydown", (event) => {
+        console.log(event.which);
+      });
+
+      // Validação.
+      element.addEventListener("keydown", (event) => {
+        if (event.code == "ArrowUp") {
+          console.log("Pressinou a tecla da seta para cima!");
+        }
+
+        console.log(event.code);
+      });
+    </script>
+  </body>
+</html>
