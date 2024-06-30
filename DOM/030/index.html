@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #030</title>
+    <style>
+      div {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" method="post" name="firstForm">
+      <div>
+        <label for="task">Task</label>
+        <input type="text" name="task" onpaste="paste()" />
+      </div>
+
+      <div>
+        <label for="time">How many days?</label> <br />
+        <select name="time">
+          <option value="1">One Day</option>
+          <option value="2">Two Days</option>
+          <option value="3">Three Days</option>
+        </select>
+      </div>
+    </form>
+
+    <script>
+      let task = document.querySelector('[name="task"]');
+      let time = document.querySelector('[name="time"]');
+
+      // Change
+      /*
+      task.addEventListener("change", () => {
+        console.log("Task Changed");
+      });
+
+      time.addEventListener("change", () => {
+        console.log("Time Changed");
+      });
+      */
+
+      // Input
+      /*
+      task.addEventListener("input", () => {
+        console.log("Insert");
+      });
+      */
+
+      // Cut
+      /*
+      task.addEventListener("cut", () => {
+        console.log("Cut");
+      });
+      */
+
+      // Copy
+      /*
+      task.addEventListener("copy", () => {
+        console.log("Copied");
+      });
+      */
+
+      // Paste
+      /*
+      task.addEventListener("paste", () => {
+        console.log("Paste");
+      });
+      */
+
+      // Alternative Way
+      /*
+      function paste() {
+        console.log("Paste");
+      }
+      */
+    </script>
+  </body>
+</html>
