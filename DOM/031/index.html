@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #031</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+      }
+
+      #form {
+        padding: 40px;
+        border: 1px solid rgb(116, 116, 116);
+      }
+
+      #form > div {
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="#" method="post" id="form">
+        <div>
+          <label for="user">User</label>
+          <input type="text" name="user" />
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" />
+        </div>
+
+        <div>
+          <input type="submit" value="Submit" />
+          <!-- <button type="button">Submit</button> -->
+          <!-- <input type="image" src="submit.jpg" alt="Image Submit Button" /> -->
+        </div>
+      </form>
+    </div>
+
+    <script>
+      let form = document.querySelector("#form");
+      form.addEventListener("submit", (event) => {
+        console.log("Submit!");
+        // preventDefault() = Efetuar Verificações e Validações.
+
+        // Validation = true, submit.
+        // Else, preventDefault().
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>
