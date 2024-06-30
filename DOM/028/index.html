@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #028</title>
+  </head>
+  <body>
+    <form action="#" method="post" name="login">
+      <div>
+        <label for="user">User</label>
+        <input type="text" name="user" id="user" value="Thiago" />
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" value="1234567" />
+      </div>
+
+      <div>
+        <input type="submit" value="Done!" />
+      </div>
+    </form>
+
+    <script>
+      console.log(document.forms.login.user.value);
+      console.log(document.forms.login.password.value);
+    </script>
+  </body>
+</html>
