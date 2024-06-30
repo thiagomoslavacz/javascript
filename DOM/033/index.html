@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #033</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        position: relative;
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+        background: linear-gradient(to right, black, gray, white);
+      }
+
+      h1 {
+        padding: 15px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-left: 3px solid white;
+        border-radius: 5px;
+      }
+
+      p {
+        position: absolute;
+        color: white;
+        margin: 10px 0 0 10px;
+      }
+
+      p > span:nth-child(1) {
+        font-weight: bold;
+      }
+
+      p > span:nth-child(2) {
+        border-bottom: 1px solid white;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("Uploaded Document"); // First
+      });
+
+      window.addEventListener("load", () => {
+        console.log("Complete Document"); // Second
+        // document.querySelector("h1").textContent = "Text Changed";
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Course Completed! 🎉</h1>
+    <p><span>ib:</span> <span>João Ribeiro</span></p>
+  </body>
+</html>
