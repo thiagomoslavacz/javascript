@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - #029</title>
+    <style>
+      div {
+        margin-bottom: 10px;
+      }
+
+      .focus {
+        background-color: red;
+        color: white;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" method="post" name="firstForm">
+      <div>
+        <label for="user">User</label>
+        <input type="text" name="user" id="user" autofocus />
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+      </div>
+
+      <div>
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+
+    <script>
+      // document.forms.firstForm.user.addEventListener("focus", () => {
+      //     console.log("Focus");
+      // });
+
+      let user = document.querySelector('[name="user"]');
+      let password = document.querySelector('[name="password"]');
+
+      // Focus
+      user.addEventListener("focus", (event) => {
+        event.target.classList.add("focus");
+      });
+
+      password.addEventListener("focus", (event) => {
+        event.target.classList.add("focus");
+      });
+
+      // Blur
+      user.addEventListener("blur", (event) => {
+        event.target.classList.remove("focus");
+        if (user.value == "Thiago") {
+          console.log("Hello!");
+        }
+      });
+
+      password.addEventListener("blur", (event) => {
+        event.target.classList.remove("focus");
+      });
+    </script>
+  </body>
+</html>
