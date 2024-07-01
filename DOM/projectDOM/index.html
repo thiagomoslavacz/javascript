@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Title -->
+    <title>JavaScript DOM - Project</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="Hamburger Logo" />
+      </div>
+      <div class="title">
+        <h1>Hot Grill</h1>
+        <p>The Best and Tastiest.</p>
+      </div>
+      <div class="profile">
+        <i id="user" class="bx bx-user"></i>
+        <p id="box">
+          Click on the main burger photo to get our special recipe. 😉
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="burguerImg">
+        <img id="burguer" src="images/burguer.jpg" alt=Hamburger"">
+        <div id="recipe">
+          <h2>Recipe 📑</h2>
+          <ul>
+            <li>½ kg of beef</li>
+            <li>1 whole egg</li>
+            <li>Salt and Pepper to taste</li>
+            <li>Lettuce</li>
+            <li>Tomato</li>
+            <li>Onion</li>
+            <li>Mayonnaise</li>
+            <li>Hamburger bun</li>
+          </ul>
+        </div>
+      </section>
+      <section class="info">
+        <h2>Grill's Rock</h2>
+        <p>
+          Our featured burger, accompanied by a delicious Grill sauce and a 150g
+          blend of charcoal-grilled wagyu. 🍔🔥
+        </p>
+        <div class="login">
+          <p>Enter your email for <span>15% OFF</span>!</p>
+          <form action="#" method="post" autocomplete="off" id="form">
+            <div>
+              <label for="username">Name:</label>
+              <input type="text" id="username" placeholder="Anything Else" />
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" id="email" placeholder="anything@gmail.com" />
+            </div>
+            <button type="submit">Let's Enjoy?</button>
+          </form>
+        </div>
+        <a class="tag" href="https://github.com/thiagomoslavacz" target="_blank"
+          >© thiagomoslavacz</a
+        >
+      </section>
+    </main>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
