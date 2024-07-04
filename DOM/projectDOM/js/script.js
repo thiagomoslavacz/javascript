@@ -1,5 +1,3 @@
-alert("This project only works on desktop.");
-
 // Header Icon User
 document.querySelector("#user").addEventListener("mouseenter", () => {
   let box = document.querySelector("#box");
@@ -11,12 +9,12 @@ document.querySelector("#user").addEventListener("mouseleave", () => {
   box.style.opacity = "0";
 });
 
-// Burguer and Recipe
+// Burger and Recipe
 document.addEventListener("DOMContentLoaded", function () {
-  let burguer = document.querySelector("#burguer");
+  let burger = document.querySelector("#burger");
   let recipe = document.querySelector("#recipe");
 
-  burguer.addEventListener("click", function () {
+  burger.addEventListener("click", function () {
     recipe.style.zIndex = "2";
     recipe.style.opacity = "1";
   });
