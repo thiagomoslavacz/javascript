@@ -2,13 +2,13 @@
   z-index: 3;
   position: relative;
   padding: 20px;
-  background-color: #b5651d;
+  background-color: $primary-color;
   color: white;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 
   h2 {
-    border-left: 8px solid #ffdb58;
+    border-left: 8px solid $secondary-color;
     padding-left: 10px;
     font-size: 50px;
   }
@@ -54,7 +54,7 @@
     }
 
     button {
-      background-color: #ffdb58;
+      background-color: $secondary-color;
       border: 1px solid black;
       border-radius: 10px;
       width: 100%;
