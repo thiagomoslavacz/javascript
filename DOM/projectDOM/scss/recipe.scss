@@ -1,0 +1,49 @@
+.burguerImg {
+  overflow: hidden;
+
+  #burger {
+    width: 400px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  #recipe {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    opacity: 0;
+    background-color: white;
+    border-left: 10px solid $primary-color;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    h2 {
+      display: inline-block;
+      padding-bottom: 2px;
+      font-weight: 600;
+      font-size: 40px;
+      border-bottom: 3px solid $secondary-color;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin: 60px;
+      gap: 20px;
+
+      li {
+        font-size: 20px;
+      }
+    }
+  }
+}

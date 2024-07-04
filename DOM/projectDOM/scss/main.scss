@@ -1,0 +1,11 @@
+/* Components */
+@import "recipe.scss";
+@import "form.scss";
+
+main {
+  position: relative;
+  width: 800px;
+  margin: 4% auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

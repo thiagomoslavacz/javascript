@@ -1,0 +1,52 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  background-color: $primary-color;
+
+  .logo img {
+    width: 60px;
+  }
+
+  .title h1 {
+    font-family: var(--title-font);
+    font-size: 45px;
+  }
+
+  .title p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .profile {
+    position: relative;
+
+    i#user {
+      font-size: 40px;
+      padding: 3px;
+      border: 3px solid black;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+
+    p#box {
+      background-color: white;
+      pointer-events: none;
+      position: absolute;
+      top: 30%;
+      right: 120%;
+      width: 170px;
+      padding: 5px 15px;
+      border-radius: 10px;
+      border-top-right-radius: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+}

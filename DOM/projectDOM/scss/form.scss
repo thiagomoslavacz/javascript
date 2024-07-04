@@ -1,0 +1,89 @@
+.info {
+  z-index: 3;
+  position: relative;
+  padding: 20px;
+  background-color: #b5651d;
+  color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  h2 {
+    border-left: 8px solid #ffdb58;
+    padding-left: 10px;
+    font-size: 50px;
+  }
+
+  > p {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  .login {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+
+    p {
+      font-size: 20px;
+
+      span {
+        color: red;
+        font-weight: bold;
+      }
+    }
+  }
+
+  #form {
+    margin-top: 20px;
+
+    div {
+      margin: 20px 0;
+
+      label {
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+
+      input {
+        width: 100%;
+        height: 40px;
+        text-indent: 5px;
+      }
+    }
+
+    button {
+      background-color: #ffdb58;
+      border: 1px solid black;
+      border-radius: 10px;
+      width: 100%;
+      margin-top: 20px;
+      padding-block: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .tag {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    transform: translateX(-20px);
+    text-align: center;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
