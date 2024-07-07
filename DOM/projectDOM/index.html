@@ -64,15 +64,41 @@
         <div class="login">
           <p>Enter your email for <span>15% OFF</span>!</p>
           <form action="#" method="post" autocomplete="off" id="form">
-            <div>
+            <div id="usernameField">
               <label for="username">Name:</label>
               <input type="text" id="username" placeholder="Anything Else" />
+              <p class="verification">
+                Awaiting form submission. <span class="waiting"></span>
+              </p>
+              <button id="userButton" class="action" type="button">
+                Let's Enjoy?
+              </button>
             </div>
-            <div>
+            <div id="emailField">
               <label for="email">Email:</label>
               <input type="email" id="email" placeholder="anything@gmail.com" />
+              <p class="verification">
+                Awaiting form submission. <span class="waiting"></span>
+              </p>
+              <button id="emailButton" class="action" type="button">
+                Let's Enjoy?
+              </button>
             </div>
-            <button type="submit">Let's Enjoy?</button>
+            <div id="passwordField">
+              <label for="password">Password:</label>
+              <input type="password" id="password" placeholder="12345678" />
+              <p class="verification">
+                Awaiting form submission. <span class="waiting"></span>
+              </p>
+              <button id="passwordButton" class="action" type="submit">
+                Let's Enjoy?
+              </button>
+            </div>
+            <p
+              id="successMessage"
+              class="success-message"
+              style="display: none"
+            ></p>
           </form>
         </div>
         <a class="tag" href="https://github.com/thiagomoslavacz" target="_blank"

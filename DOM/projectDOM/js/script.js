@@ -25,34 +25,110 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Form Validation
+// Form
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("#form");
+  const verifications = document.querySelectorAll(".verification");
+  const successMessage = document.querySelector("#successMessage");
 
-  form.addEventListener("submit", function (validationEvent) {
-    validationEvent.preventDefault();
+  const usernameField = document.querySelector("#usernameField");
+  const emailField = document.querySelector("#emailField");
+  const passwordField = document.querySelector("#passwordField");
 
-    if (validateForm()) {
-      alert("Form sent successfully!");
-      form.reset();
+  const userButton = document.querySelector("#userButton");
+  const emailButton = document.querySelector("#emailButton");
+  const passwordButton = document.querySelector("#passwordButton");
+
+  usernameField.style.display = "block";
+  emailField.style.display = "none";
+  passwordField.style.display = "none";
+
+  document
+    .querySelector("#username")
+    .addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        userButton.click();
+      }
+    });
+
+  document
+    .querySelector("#email")
+    .addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        emailButton.click();
+      }
+    });
+
+  document
+    .querySelector("#password")
+    .addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        passwordButton.click();
+      }
+    });
+
+  userButton.addEventListener("click", function () {
+    const username = document.querySelector("#username").value.trim();
+    if (username !== "") {
+      usernameField.style.display = "none";
+      emailField.style.display = "block";
+      hideVerificationMessages();
     } else {
-      alert("Please fill in all fields correctly.");
+      showErrorMessage("Please enter a username.", usernameField);
     }
   });
 
-  function validateForm() {
-    const username = document.querySelector("#username").value.trim();
+  emailButton.addEventListener("click", function () {
     const email = document.querySelector("#email").value.trim();
-
-    if (username === "" && email === "") {
-      return false;
-    }
-
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return false;
+    if (email !== "" && emailRegex.test(email)) {
+      emailField.style.display = "none";
+      passwordField.style.display = "block";
+      hideVerificationMessages();
+    } else {
+      showErrorMessage("Please enter a valid email.", emailField);
     }
+  });
 
-    return true;
+  passwordButton.addEventListener("click", function () {
+    const password = document.querySelector("#password").value.trim();
+    if (password !== "") {
+      showSuccessMessage();
+    } else {
+      showErrorMessage("Please enter a password.", passwordField);
+    }
+  });
+
+  form.addEventListener("submit", function (validationEvent) {
+    validationEvent.preventDefault();
+  });
+
+  function showSuccessMessage() {
+    successMessage.innerText = "Form sent successfully!";
+    successMessage.style.display = "block";
+    setTimeout(function () {
+      successMessage.style.display = "none";
+    }, 2000);
+    form.reset();
+    usernameField.style.display = "block";
+    emailField.style.display = "none";
+    passwordField.style.display = "none";
+    hideVerificationMessages();
+  }
+
+  function showErrorMessage(message, field) {
+    const verificationMessage = field.querySelector(".verification");
+    verificationMessage.innerText = message;
+    verificationMessage.style.color = "red";
+    verificationMessage.style.display = "block";
+  }
+
+  function hideVerificationMessages() {
+    verifications.forEach((verification) => {
+      verification.style.display = "none";
+    });
   }
 });
