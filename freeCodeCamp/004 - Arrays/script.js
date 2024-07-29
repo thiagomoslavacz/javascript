@@ -17,8 +17,6 @@ const myArray = ["Felipe", 15, "Casado"];
 myArray.shift();
 myArray.pop();
 
-// -------------------------
-
 myArray.unshift("Thiago");
 myArray.push("Solteiro");
 
