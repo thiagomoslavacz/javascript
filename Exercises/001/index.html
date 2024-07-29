@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      h1,
+      p {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+    <title>Learning JavaScript</title>
+  </head>
+  <body>
+    <!-- JavaScript course in: 'Programação Web'. Skipped to class 08 starting with functions. -->
+    <h1>Learning JavaScript</h1>
+    <p id="text">Hello World!</p>
+
+    <script>
+      /*
+      Uma Função JavaScript é um bloco de código projetado para executar uma tarefa específica e será executada quando "algo" a invoca (chama-a).
+
+      Como uma "fábrica" onde você faz uma entrada e ele gera uma saída.
+
+      Pode ser encarado como "mini-programas" projetados para fazer uma tarefa que contruibuirá para todo o código.
+      */
+
+      // function soma(valor1, valor2) {
+      //   return valor1 + valor2;
+      // }
+
+      // function realForDollar(real, cotacaoDollar) {
+      //   return real * cotacaoDollar;
+      // }
+
+      // const real = 7.89;
+      // const cotacao = 5.08;
+
+      // const total = realForDollar(real, cotacao);
+
+      function forCelsius(valueFarenheit) {
+        return (5 / 9) * (valueFarenheit - 32);
+      }
+
+      const x = forCelsius(77);
+
+      alert("A temperatura é de " + x + " graus Celsius");
+
+      function myFunction() {
+        const x = 2;
+      }
+    </script>
+  </body>
+</html>
